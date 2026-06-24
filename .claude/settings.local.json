@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Bash(ls ~/Desktop 2>&1 | head -5; echo \"---\"; ls ~ | head -20)",
+      "Bash(git config *)"
+    ]
+  }
+}
