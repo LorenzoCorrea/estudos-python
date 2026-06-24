@@ -30,11 +30,24 @@ Calculo de distancia:
 # Para inferiores ou iguais, de 15%
 
 
-salario = float(input("Digite seu salário: \n"))
+# salario = float(input("Digite seu salário: \n"))
 
-if salario > 1250.00: 
-  aumento = salario * 0.10
-else:
-   aumento = salario * 0.15
+# if salario > 1250.00: 
+#   aumento = salario * 0.10
+# else:
+#    aumento = salario * 0.15
 
-print(f"O valor do aumento é de R${aumento}")
+# print(f"O valor do aumento é de R${aumento}")
+
+"""
+Esse é um clássico da programação.
+Escreva um programa que pergunte a velocidade atual de um carro (em km/h).
+
+Se a velocidade for maior que 80 km/h, o programa deve exibir uma mensagem dizendo que o usuário foi multado.
+
+A multa custa R$ 5,00 por cada km acima do limite. Calcule o valor da multa e exiba na tela.
+
+Se a velocidade for 80 ou menos, exiba apenas uma mensagem: "Boa viagem, motorista!".
+
+Dica de Lógica: Para saber os quilômetros excedentes, você precisa subtrair 80 da velocidade digitada.
+"""
