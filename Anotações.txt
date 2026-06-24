@@ -29,6 +29,9 @@ print("-" * 20)
 # O range(1, 6) vai contar do 1 até o 5.
 for pagina in range(1, 6):
     print(f"Lendo a página {pagina} de 5...")
+
+
+    
 C. while (O Sentinela)
 Ele repete algo até que uma condição mude, não importa quantas vezes precise rodar. Você não sabe quando ele vai parar.
 
