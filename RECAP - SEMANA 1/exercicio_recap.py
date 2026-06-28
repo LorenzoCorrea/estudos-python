@@ -9,47 +9,14 @@
 # Imprima na tela o código final usando F-String no formato:
 # "Seu código de acesso é: LOR-oznerol-1995"    
 
-name = str(input("Digite seu nome: \n"))
-yearNasc = int(input("Digite seu ano de nascimento: \n"))
-# Pega as 3 primeiras e deixa maiúsculo 
-char = name[:3].upper()
-# Inverte a palavra E garante que fique tudo minúsculo
-acess1 = name[::-1].lower()
+# name = str(input("Digite seu nome: \n"))
+# yearNasc = int(input("Digite seu ano de nascimento: \n"))
+# # Pega as 3 primeiras e deixa maiúsculo 
+# char = name[:3].upper()
+# # Inverte a palavra E garante que fique tudo minúsculo
+# acess1 = name[::-1].lower()
 
-print(f"{char}-{acess1}-{yearNasc}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# print(f"{char}-{acess1}-{yearNasc}")
 
 
 
@@ -62,20 +29,65 @@ print(f"{char}-{acess1}-{yearNasc}")
 
 
 # 🎒 Desafio 2: O Inventário do Aventureiro (Listas, Sets e For)
-# Você está programando o inventário de um jogo, mas houve um bug e o jogador recebeu itens duplicados!
-
+# Você está programando o inventário de um jogo, mas houve um bug e o jogador 
+# recebeu itens duplicados!
 # O que você deve fazer:
-
 # Crie no seu código a seguinte lista com itens repetidos:
 # mochila = ["Poção", "Espada", "Poção", "Escudo", "Poção", "Mapa"]
-
-# Usando o poder do tipo Set, remova todas as duplicatas da mochila de uma vez só (lembre-se que Sets não aceitam repetições).
-
+# Usando o poder do tipo Set, remova todas as duplicatas da mochila de uma vez
+#  só (lembre-se que Sets não aceitam repetições).
 # Transforme esse Set de volta para uma Lista.
-
 # Adicione o item "Arco" no final dessa nova lista.
+# Use um laço for para imprimir cada item final do inventário do jogador,
+#  um embaixo do outro.
 
-# Use um laço for para imprimir cada item final do inventário do jogador, um embaixo do outro.
+mochila = ["Poção", "Espada", "Poção", "Escudo", "Poção", "Mapa"]
+
+# 1. Transformamos em Set (limpa duplicatas) e logo em seguida de volta em Lista
+mochila_limpa = list(set(mochila))
+
+# 2. Agora sim, adicionamos o Arco no final da lista limpa
+mochila_limpa.append("Arco")
+
+# 3. O Viajante: Para cada 'item' individual dentro da 'mochila_limpa'
+for item in mochila_limpa:
+    print(item) # Imprime apenas o item da rodada
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 🏦 Desafio 3: O Caixa Eletrônico (While e If/Elif/Else)
 # Vamos testar sua lógica de controle de repetições e tomadas de decisão.
