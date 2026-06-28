@@ -41,46 +41,17 @@
 # Use um laço for para imprimir cada item final do inventário do jogador,
 #  um embaixo do outro.
 
-mochila = ["Poção", "Espada", "Poção", "Escudo", "Poção", "Mapa"]
+# mochila = ["Poção", "Espada", "Poção", "Escudo", "Poção", "Mapa"]
 
-# 1. Transformamos em Set (limpa duplicatas) e logo em seguida de volta em Lista
-mochila_limpa = list(set(mochila))
+# # 1. Transformamos em Set (limpa duplicatas) e logo em seguida de volta em Lista
+# mochila_limpa = list(set(mochila))
 
-# 2. Agora sim, adicionamos o Arco no final da lista limpa
-mochila_limpa.append("Arco")
+# # 2. Agora sim, adicionamos o Arco no final da lista limpa
+# mochila_limpa.append("Arco")
 
-# 3. O Viajante: Para cada 'item' individual dentro da 'mochila_limpa'
-for item in mochila_limpa:
-    print(item) # Imprime apenas o item da rodada
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# # 3. O Viajante: Para cada 'item' individual dentro da 'mochila_limpa'
+# for item in mochila_limpa:
+#     print(item) # Imprime apenas o item da rodada
 
 
 
@@ -91,28 +62,70 @@ for item in mochila_limpa:
 
 # 🏦 Desafio 3: O Caixa Eletrônico (While e If/Elif/Else)
 # Vamos testar sua lógica de controle de repetições e tomadas de decisão.
-
 # O que você deve fazer:
-
 # Crie uma variável saldo começando com o valor 500.0.
-
-# Crie um loop while que rode continuamente (você pode usar uma variável como opcao != "3" para controlar o loop).
-
+# Crie um loop while que rode continuamente (você pode usar uma variável como opcao 
+# != "3" para controlar o loop).
 # Dentro do loop, mostre o saldo atual e dê 3 opções para o usuário (usando input):
-
 # [1] Sacar
-
 # [2] Depositar
-
 # [3] Sair
-
 # Use if/elif/else:
-
-# Se for 1: Pergunte o valor do saque. Se o valor for maior que o saldo, imprima "Saldo insuficiente!". Se não for, subtraia o valor do saldo.
-
+# Se for 1: Pergunte o valor do saque. Se o valor for maior que o saldo, imprima 
+# "Saldo insuficiente!". Se não for, subtraia o valor do saldo.
 # Se for 2: Pergunte o valor e some ao saldo.
-
 # Se for 3: Imprima "Saindo..." e encerre o programa.
+
+saldo = 500.0
+opcao = "" # Criamos a variável vazia para conseguir entrar no loop a primeira vez
+
+# 1. O Sentinela: Roda ENQUANTO a opção for diferente de "3"
+while opcao != "3":
+    
+    # 2. Mostramos a tela do caixa
+    print(f"\n--- CAIXA ELETRÔNICO ---")
+    print(f"Saldo atual: R$ {saldo:.2f}")
+    print("[1] Sacar")
+    print("[2] Depositar")
+    print("[3] Sair")
+    
+    # 3. Perguntamos o que ele quer fazer
+    opcao = input("Escolha uma opção: ")
+    
+    # 4. As Portas de Decisão (Onde você vai preencher!)
+    if opcao == "1":
+        # Aqui entra a sua lógica de saque! 
+        # Pergunte o valor do saque usando float(input(...))
+        # Se for maior que o saldo, dê erro.
+        # Senão, faça a conta: saldo = saldo - valor
+        ...
+        
+    elif opcao == "2":
+        # Aqui você pergunta o valor do depósito usando float(input(...))
+        # E faz a conta: saldo = saldo + valor
+        ...
+        
+    elif opcao == "3":
+        print("Saindo do sistema... Até logo!")
+        
+    else:
+        print("Opção inválida! Tente novamente.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 🧙‍♂️ Desafio 4: A Taverna (Funções, Dicionários, *args e kwargs)
 # Vamos criar a máquina que registra os heróis na guilda.
