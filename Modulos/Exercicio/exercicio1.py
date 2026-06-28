@@ -4,3 +4,14 @@
 # Inverter uma string de trás pra frente.
 # Retornar apenas letras com índice par.
 # Retornar apenas letras com índice ímpar
+
+
+
+
+import strings
+
+name = input("Digite uma frase: \n")
+
+print(strings.inverse(name))
+print(strings.even_char(name))
+print(strings.odd_char(name))
