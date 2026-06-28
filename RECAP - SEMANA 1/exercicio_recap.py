@@ -77,40 +77,37 @@
 # Se for 3: Imprima "Saindo..." e encerre o programa.
 
 saldo = 500.0
-opcao = "" # Criamos a variável vazia para conseguir entrar no loop a primeira vez
+opcao = ""
 
-# 1. O Sentinela: Roda ENQUANTO a opção for diferente de "3"
 while opcao != "3":
     
-    # 2. Mostramos a tela do caixa
     print(f"\n--- CAIXA ELETRÔNICO ---")
     print(f"Saldo atual: R$ {saldo:.2f}")
     print("[1] Sacar")
     print("[2] Depositar")
     print("[3] Sair")
     
-    # 3. Perguntamos o que ele quer fazer
     opcao = input("Escolha uma opção: ")
     
-    # 4. As Portas de Decisão (Onde você vai preencher!)
+    # Repare como o if, os elif e o else estão colados na mesma reta vertical!
     if opcao == "1":
-        # Aqui entra a sua lógica de saque! 
-        # Pergunte o valor do saque usando float(input(...))
-        # Se for maior que o saldo, dê erro.
-        # Senão, faça a conta: saldo = saldo - valor
-        ...
-        
+        valor = float(input("Quanto deseja sacar? R$ "))
+        if valor > saldo:
+            print("Saldo insuficiente!")
+        else:
+            saldo = saldo - valor
+            print(f"Saque de R$ {valor:.2f} realizado!")
+
     elif opcao == "2":
-        # Aqui você pergunta o valor do depósito usando float(input(...))
-        # E faz a conta: saldo = saldo + valor
-        ...
+        valor = float(input("Quanto deseja depositar? R$ "))
+        saldo = saldo + valor
+        print(f"Depósito de R$ {valor:.2f} realizado!")
         
     elif opcao == "3":
         print("Saindo do sistema... Até logo!")
         
     else:
         print("Opção inválida! Tente novamente.")
-
 
 
 
