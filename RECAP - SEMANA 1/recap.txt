@@ -1,0 +1,224 @@
+# 🐍 GUIA DE CONSULTA RÁPIDA - PYTHON (SEMANA 1)
+
+## 1. FUNDAMENTOS E ENTRADA DE DADOS
+Tudo começa com a criação de variáveis e a interação com o usuário.
+
+*   **Tipos de Dados Básicos:**
+    *   `str` (String): Textos `"Lorenzo"`
+    *   `int` (Integer): Números inteiros `10`
+    *   `float` (Float): Números com decimais `10.5` (Sempre use ponto!)
+    *   `bool` (Boolean): Verdadeiro ou Falso `True` / `False`
+
+```python
+# Entrada de dados (O input SEMPRE devolve uma String por padrão)
+nome = input("Qual seu nome? ")
+
+# Conversão de Tipos (Casting)
+idade = int(input("Qual sua idade? "))
+salario = float(input("Qual seu salário? "))
+
+# Saída de dados com F-String (A forma mais moderna de misturar texto e variável)
+print(f"Olá {nome}, você tem {idade} anos e ganha R${salario:.2f}")
+2. MANIPULANDO STRINGS (TEXTOS)
+Strings são como listas de letras. O Python tem várias ferramentas embutidas para brincar com elas.
+
+Python
+texto = "Python é Incrível"
+
+# Principais Métodos
+print(texto.upper())       # TUDO MAIÚSCULO
+print(texto.lower())       # tudo minúsculo
+print(texto.count("i"))    # Conta quantas vezes a letra 'i' aparece
+print(texto.replace("Incrível", "Fácil")) # Troca uma palavra por outra
+print(texto.find("é"))     # Mostra em qual posição (índice) a letra está
+
+# Fatiamento (Slicing) -> [início : fim : passo]
+# Lembrete: O limite final NÃO é incluído!
+palavra = "Programação"
+print(palavra[0:5])   # Pega do índice 0 até o 4 (Progr)
+print(palavra[::2])   # Pega a palavra inteira pulando de 2 em 2 letras
+print(palavra[::-1])  # Inverte a string (marcha ré)
+3. COLEÇÕES (LISTAS, TUPLAS, SETS E DICIONÁRIOS)
+Formas de guardar vários valores dentro de uma única variável.
+
+A. Listas [] -> Mutáveis (Pode alterar)
+Python
+frutas = ["Maçã", "Banana", "Uva"]
+frutas.append("Morango") # Adiciona no final
+frutas.remove("Banana")  # Remove pelo nome
+frutas[0] = "Pera"       # Substitui o item da posição 0
+B. Tuplas () -> Imutáveis (NÃO pode alterar)
+Ótimas para dados que nunca devem mudar (como coordenadas ou configurações).
+
+Python
+coordenadas = (10.5, 20.3)
+# coordenadas[0] = 15.0  -> ISSO DARIA ERRO!
+C. Sets {} -> Valores Únicos (Não aceita repetição)
+Ótimos para remover duplicatas de uma lista.
+
+Python
+numeros = {1, 2, 2, 3, 4, 4}
+print(numeros) # Imprime: {1, 2, 3, 4}
+D. Dicionários {} -> Chave e Valor
+Python
+jogador = {"nome": "Neymar", "camisa": 10}
+jogador["gols"] = 300 # Adiciona nova chave/valor
+print(jogador["nome"]) # Acessa o valor
+4. TOMADA DE DECISÃO (IF / ELIF / ELSE)
+O "Porteiro" do código. Ele faz perguntas e escolhe qual caminho seguir.
+
+Python
+velocidade = 85
+
+if velocidade <= 80:
+    print("Boa viagem!")
+elif velocidade <= 100:  # O elif (senão se) testa uma segunda condição
+    print("Multa leve.")
+else:                    # O else (senão) é o que sobra se tudo falhar
+    print("Multa gravíssima!")
+5. LAÇOS DE REPETIÇÃO (FOR e WHILE)
+O for (O Viajante / Contador)
+Sabe exatamente quando vai parar.
+
+Python
+# Viajando por uma lista
+for fruta in frutas:
+    print(fruta)
+
+# Contando com range (início, fim, passo)
+for numero in range(1, 6): # Vai do 1 ao 5
+    print(numero)
+O while (O Sentinela)
+Repete até a condição deixar de ser verdadeira. Cuidado com o loop infinito!
+
+Python
+senha = ""
+while senha != "123":
+    senha = input("Digite a senha: ")
+print("Acesso liberado!")
+List Comprehension (O for de uma linha só)
+Um jeito ninja de criar listas baseadas em outras.
+
+Python
+numeros = [1, 2, 3, 4, 5]
+# Cria uma nova lista multiplicando cada x por 2
+dobro = [x * 2 for x in numeros] 
+6. FUNÇÕES (def)
+Máquinas reutilizáveis de código.
+
+Python
+# Função normal
+def saudacao(nome):
+    return f"Olá, {nome}!"
+
+# *args (Múltiplos valores soltos -> Vira Tupla)
+def somar(*args):
+    return sum(args)
+
+# **kwargs (Múltiplos valores nomeados -> Vira Dicionário)
+def ficha(**kwargs):
+    for chave, valor in kwargs.items():
+        print(f"{chave}: {valor}")
+
+# Função Lambda (Função anônima de uma linha só)
+dobrar = lambda x: x * 2
+print(dobrar(10)) # Imprime 20
+7. MÓDULOS E PIP
+Como importar superpoderes de outros arquivos ou da internet.
+
+Python
+# Importando um módulo inteiro
+import math
+print(math.sqrt(25)) # Raiz quadrada
+
+# Importando apenas uma ferramenta específica
+from datetime import date
+hoje = date.today()
+print(hoje)
+
+---
+
+Pronto, seu arsenal está completo! Com esse guia salvo, você não precisa mais decorar a sintaxe, basta consultar. 
+
+<FollowUp label="Vamos testar esse conhecimento?" query="Estou com o guia salvo! Pode me mandar de novo o
+
+
+Dicionários ({})
+Diferente das Listas (que usam posições numéricas 0, 1, 2...), os Dicionários usam Chaves (nomes) para guardar Valores. Pense neles como um armário cheio de gavetas etiquetadas.
+
+Símbolo: Chaves {}
+
+Estrutura: "Chave": "Valor"
+
+Python
+# 1. Como Criar
+jogador = {
+    "nome": "Neymar",
+    "camisa": 10,
+    "time": "Al-Hilal"
+}
+
+# 2. Como Acessar um valor (Basta chamar a etiqueta da gaveta)
+print(jogador["nome"]) # Imprime: Neymar
+
+# 3. Como Adicionar ou Modificar um valor
+jogador["gols"] = 300 # Como a chave "gols" não existe, ele cria.
+jogador["camisa"] = 11 # Como a chave "camisa" já existe, ele substitui o valor.
+
+# 4. Como Viajar (Iterar) por um Dicionário usando FOR
+# O .items() é obrigatório para extrair a Chave e o Valor ao mesmo tempo
+for chave, valor in jogador.items():
+    print(f"A chave {chave} guarda o valor {valor}")
+2. Funções (def)
+Uma função é um bloco de código que só roda quando é chamado. É como uma "máquina" que você constrói uma vez e pode usar quantas vezes quiser. Ela pode receber ingredientes (parâmetros) e devolver um produto pronto (return).
+
+Palavra-chave: def (define)
+
+O return: O que a máquina cospe para fora no final do trabalho.
+
+Python
+# 1. Construindo a Máquina (A Função)
+def calcular_dobro(numero):
+    resultado = numero * 2
+    return resultado # Devolve o valor para quem chamou a função
+
+# 2. Usando a Máquina
+# A função não faz nada sozinha. Você precisa chamá-la pelo nome:
+conta = calcular_dobro(10)
+print(conta) # Imprime: 20
+3. *args (Argumentos Infinitos sem Nome)
+Usado quando você quer criar uma função, mas não sabe quantos valores o usuário vai enviar. O Python pega todos os valores extras, empacota e transforma em uma Tupla.
+
+Significado: *Arguments (Argumentos posicionais).
+
+A Mágica: O asterisco * é o que faz a mágica de empacotar. O nome "args" é apenas uma convenção mundial, mas poderia ser *valores ou *numeros.
+
+Python
+# A função aceita qualquer quantidade de números
+def somar_tudo(*args):
+    # args virou uma tupla: (10, 20, 30, 40)
+    total = sum(args) # sum() é uma função nativa que soma tudo
+    print(f"A soma total é: {total}")
+
+# Testando com quantidades diferentes
+somar_tudo(10, 20)
+somar_tudo(10, 20, 30, 40, 50)
+4. kwargs (Argumentos Infinitos COM Nome)
+Usado quando você quer enviar vários valores extras para a função, mas quer dar um nome (etiqueta) para cada um deles. O Python pega esses nomes e valores e os transforma automaticamente em um Dicionário dentro da função.
+
+Significado: Keyword Arguments (Argumentos de Palavras-Chave).
+
+A Mágica: Os dois asteriscos  avisam o Python para montar um dicionário.
+
+Python
+# O **kwargs vai capturar tudo que tiver um sinal de '='
+def criar_perfil(nome_principal, **kwargs):
+    print(f"Perfil de: {nome_principal}")
+    
+    # kwargs virou um dicionário. Ex: {"idade": 30, "cidade": "SP"}
+    for chave, valor in kwargs.items():
+        print(f"{chave.capitalize()}: {valor}")
+
+# Testando: o primeiro valor vai para 'nome_principal'. 
+# O resto vira o dicionário **kwargs por causa do sinal de igual (=)
+criar_perfil("Carlos", idade=30, cidade="São Paulo", profissao="Dev"
