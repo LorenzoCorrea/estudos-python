@@ -7,3 +7,10 @@ Pip
     * São arquivos e em Python que pode conter funções, classes e variáveis
     * Módulos podem ser importados usando a palavra reservada IMPORT 
     * Os módulos também permitem a reutilização de código
+
+- Vantagens de usar Módulos:
+    * Simplicidade (Dividir para conquistar )
+    * Melhor manutenibilidade no código
+    * Isolamento no projeto de software
+    * Facilita a colaboração entre desenvolvedores e outros integrantes
+    
