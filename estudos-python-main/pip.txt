@@ -1,0 +1,9 @@
+Pip
+- Motivação:
+    * Decompor uma tarefa complexa em tarefas menores e de facíl resolução!
+    * Fazer o uso da técnica "dividir para conquistar"
+    * Evitar a resolução de código
+- O que é o módulo?
+    * São arquivos e em Python que pode conter funções, classes e variáveis
+    * Módulos podem ser importados usando a palavra reservada IMPORT 
+    * Os módulos também permitem a reutilização de código
