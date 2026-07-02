@@ -6,3 +6,6 @@
 - Herança
 - Decorator
 =-=-==-=--=-=-=-=-=-=-=-===-=-=--==-
+Poo:
+  - Uma nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real
+  - t
