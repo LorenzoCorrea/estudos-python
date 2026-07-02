@@ -9,3 +9,5 @@
 Poo:
   - Uma nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real
   - Objetos do mundo real transformam-se em Objeto de software
+  - Torna mais fácil a manutenção do sistema
+  - Uma classe possui atributos (características) e métodos(comportamentos)
