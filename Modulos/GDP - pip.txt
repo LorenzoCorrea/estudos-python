@@ -16,3 +16,6 @@ Bibiliotecas mais famosas:
 - Pandas (Serve para manipular dados)
   pip install pandas (comando para instalar)
 
+
+
+ss
