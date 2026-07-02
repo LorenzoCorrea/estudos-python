@@ -5,3 +5,14 @@ Gerenciador de Dependencias - PIP
 - Instalação é feita atraves de linha de código
 
 - Pip vem instalado na distribuição do Python
+
+
+-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Conhecendo as bibiliotecas do Python
+
+Site: pypi.org
+
+Bibiliotecas mais famosas:
+- Pandas (Serve para manipular dados)
+  pip install pandas (comando para instalar)
+
