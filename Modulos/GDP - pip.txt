@@ -1,3 +1,7 @@
 Gerenciador de Dependencias - PIP
 
+- PIP é uma coleçã/Lista de ferramentas que automatiza o processo de instalação
 
+- Instalação é feita atraves de linha de código
+
+- Pip vem instalado na distribuição do Python
