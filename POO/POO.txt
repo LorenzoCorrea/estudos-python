@@ -8,4 +8,4 @@
 =-=-==-=--=-=-=-=-=-=-=-===-=-=--==-
 Poo:
   - Uma nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real
-  - t
+  - Objetos do mundo real transformam-se em Objeto de software
