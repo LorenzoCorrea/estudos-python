@@ -4,3 +4,4 @@ class Movie: ###Sempre nomear a classe com a primeira letra maiuscula
   includedPlan = False
   note = 0
   durationMinutes = 0
+  
