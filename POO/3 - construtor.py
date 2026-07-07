@@ -5,7 +5,10 @@ class Movie:
     self.includedPlan = includedPlan
     self.note = note
     self.durationMinutes = durationMinutes
+  
 
+  def __str__(self):
+    return f"Filme: {self.name}"
 
-movie = Movie("Super man", 2024, False, 5.0, 120)
-print(movie.name)
+movie = Movie("Super Mario", 2023, False, 10.0, 120)
+print(movie) 
