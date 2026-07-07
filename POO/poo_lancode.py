@@ -23,22 +23,30 @@ class Canal:
 class CanalEmpresarial(Canal): ##O canal empresarial herdou do "CANAL"
   def __init__(self, nome, descricao, inscritos):
     super().__init__(nome, descricao, inscritos) ###Super chama a classe pai, de cima ou seja a CANAL
-    self.equipe = []
+    self._equipe = []
+
+  @property 
+  def equipe(self):
+    return self._equipe
+  
+  def adicionar_membro_equipe(self, membro):
+    if membro not in self._equipe:
+      self._equipe.append(membro)
+    else:
+      print(f"O membro {membro} ja está na equipe!")
+
+  def remover_membro_equipe(self, membro):
+    if membro in self._equipe:
+      self._equipe.remove(membro)
+    else:
+      print(f"O membro {membro} não está mais na equipe")
+
 
 canal_lohn= Canal("Lohn", "Sem desc", 0)
 canal_lancode = Canal("Lancode", "Códigos e Gatos", 65600)
 canal_duolingo = CanalEmpresarial("Duolingo", "ingres", 6000000)
 
-
-print(canal_duolingo.descricao)
-canal_duolingo.equipe.append("Ana")
-canal_duolingo.equipe.append("Lorenzo")
-canal_duolingo.equipe.append("Pedro")
-canal_duolingo.equipe.append("Ana")
-
-
-
-
-
-print(canal_duolingo.equipe)
-
+canal_duolingo.adicionar_membro_equipe("Pedro")
+canal_duolingo.remover_membro_equipe("Pedro")
+canal_duolingo.adicionar_membro_equipe("Andre")
+print(f"Membros Atuais: \n {canal_duolingo.equipe}")

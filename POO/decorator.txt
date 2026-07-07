@@ -1,0 +1,2 @@
+Permite adicionar um comportamento a um objeto ja existente em tempo de execução
+Oferece uma alternativa ao uso de herança
