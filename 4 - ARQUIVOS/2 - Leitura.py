@@ -7,9 +7,13 @@
 
 '''
 
-with open("names.txt", "r") as file:
+# with open("names.txt", "r") as file:
+#   for line in file:
+#     print(line)
+
+
+#Leitura serve pra colocar o conteudo do txt criado na escrita no 
+
+with open("names.txt", "r", encoding="utf-8") as file:
   for line in file:
-    print(line)
-
-
-#Leitura serve pra colocar o conteudo do txt criado na escrita no terminal
+    print(f"Olá, {line.rstrip()}")
