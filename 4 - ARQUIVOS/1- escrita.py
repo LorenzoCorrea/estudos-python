@@ -1,13 +1,20 @@
 name = input("Digite seu nome: \n")
 '''
 - Arquivos:
-1 - W - Write
-2 - A - Append
+1 - W - Write - Escrever
+2 - A - Append - Adicionar no final da lista
 3 - R - Read
 
 
 '''
 
-file = open("names.txt", "w") ###Serve para trabalhar com arquivos
-file.write(name)
-file.close()
+
+# #Alternativa 1
+# file = open("names.txt", "a") ###Serve para trabalhar com arquivos
+# file.write(f"{name}\n")
+# file.close()
+
+
+#Alternativa 2
+with open("names.txt", "a") as file:
+  file.write(f"{name}\n")
