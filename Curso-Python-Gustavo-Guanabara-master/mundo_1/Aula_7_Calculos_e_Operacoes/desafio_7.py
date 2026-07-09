@@ -1,9 +1,9 @@
 # Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média
+n1 = float(input("Digite a nota do primeiro trimestre: "))
+n2 = float(input("Digite a nota do segundo trimestre: "))
+n3 = float(input("Digite a nota do terceiro trimestre: "))
 
-nota1 = float(input("Nota 1: \n"))
-nota2 = float(input("Nota 2: \n"))
-print(
-    "A média das notas {:.1f} e {:.1f} é {:.1f}!".format(
-        nota1, nota2, ((nota1 + nota2) / 2)
-    )
-)
+nota = n1 + n2 + n3 
+media = nota / 3
+
+print(f"A nota final foi: {media}")
