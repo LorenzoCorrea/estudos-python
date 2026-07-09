@@ -2,12 +2,12 @@
 # e mostre na tela o seu tipo primitivo
 # e todas as informações possíveis sobre ele
 
-entrada = input("Digite algo: \n")
-print("Tipo primitivo: {}.".format(type(entrada)))
-
-print("É numérico? {}".format(entrada.isnumeric()))
-print("É alfanumérico? {}.".format(entrada.isalpha()))
-print("É um decimal? {}.".format(entrada.isdecimal()))
-print("Está em caixa baixa? {}.".format(entrada.islower()))
-print("É apenas espaço em branco? {}.".format(entrada.isspace()))
-print("Está em caixa alta? {}.".format(entrada.isupper()))
+algo = str(input("Digite uma plavra: "))
+print(f"O tipo primitivo desse valor é: {type(algo)}")
+print(f"Só tem espaços? {algo.isspace()}")
+print(f"É um número? {algo.isnumeric()}")
+print(f"É alfabético (só letras)? {algo.isalpha()}")
+print(f"É alfanumérico (letras e/ou números)? {algo.isalnum()}")
+print(f"Está tudo em maiúsculas? {algo.isupper()}")
+print(f"Está tudo em minúsculas? {algo.islower()}")
+print(f"Está capitalizada (1ª letra maiúscula)? {algo.istitle()}")
