@@ -24,14 +24,14 @@
 
 
 
-# Elegibilidade para um Evento (Idade Mínima): Imagine um evento para maiores de 15 anos. Crie um código que pergunte a idade do usuário. 
-# Verifique se a idade do usuário é maior ou igual a 15. Se for, exiba "Você pode participar do evento!".
-idade= int("Digite sua idade: \n")
-if idade >= 15:
-  print("Você pode participar do evento!")
-else:
-  print("Você não pode entrar")
+# # Elegibilidade para um Evento (Idade Mínima): Imagine um evento para maiores de 15 anos. Crie um código que pergunte a idade do usuário. 
+# # Verifique se a idade do usuário é maior ou igual a 15. Se for, exiba "Você pode participar do evento!".
+# idade= int("Digite sua idade: \n")
+# if idade >= 15:
+#   print("Você pode participar do evento!")
+# else:
+#   print("Você não pode entrar")
 
-# Lembre-se que o objetivo é praticar o uso do if e dos operadores de comparação que vimos nesta aula. Não se preocupe se encontrar dificuldades, faz parte do aprendizado! Na próxima aula, resolveremos juntos esses exercícios. 😉
+# # Lembre-se que o objetivo é praticar o uso do if e dos operadores de comparação que vimos nesta aula. Não se preocupe se encontrar dificuldades, faz parte do aprendizado! Na próxima aula, resolveremos juntos esses exercícios. 😉
 
 # E se a programação te der um nó na cabeça, lembre-se que a persistência é a chave! 🚀
