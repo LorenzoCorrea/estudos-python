@@ -53,3 +53,8 @@ while senha_digitada != senha_correta:
 
 # Quando ele acertar a senha, o while é quebrado e o código cai aqui embaixo:
 print("Acesso Liberado! Bem-vindo ao sistema. 🔓")
+
+
+
+
+#### teste de comit no main pc
