@@ -14,28 +14,32 @@
 
 
 
-# Crie um código onde o usuário deve inserir dois números e exiba a soma, subtração, multiplicação e divisão deles.
-n1 = int(input("Digite o primeiro número: \n"))
-n2 = int(input("Digite o segundo número: \n"))
+# # Crie um código onde o usuário deve inserir dois números e exiba a soma, subtração, multiplicação e divisão deles.
+# n1 = int(input("Digite o primeiro número: \n"))
+# n2 = int(input("Digite o segundo número: \n"))
 
-soma = n1 + n2
-sub = n1 - n2
-div = n1 / n2
-mult = n1 * n2
+# soma = n1 + n2
+# sub = n1 - n2
+# div = n1 / n2
+# mult = n1 * n2
 
-print(f"A soma de {n1} e {n2} é {soma}")
-print(f"A subtração de {n1} e {n2} é {sub}")
-print(f"A divisão de {n1} e {n2} é {div}")
-print(f"A multiplicação de {n1} e {n2} é {mult}")
-
+# print(f"A soma de {n1} e {n2} é {soma}")
+# print(f"A subtração de {n1} e {n2} é {sub}")
+# print(f"A divisão de {n1} e {n2} é {div}")
+# print(f"A multiplicação de {n1} e {n2} é {mult}")
 
 
 
 
 # Crie um código onde o usuário deve digitar três notas escolares e calcular a média delas.
 
-# Se você não conseguir resolver alguns desses exercícios, tudo bem! Eu irei faze-los na próxima aula! :)
+n1 = float(input("Digite a primeira nota: \n"))
+n2 = float(input("Digite a segunda nota: \n"))
+n3 = float(input("Digite a terceira nota: \n"))
+
+media = (n1 + n2 + n3) / 3
+print(f"A média das notas é {media}")
 
 
 
-# Se acabar se irritando por não conseguir, olhe para esse gatinho fofo!
+
