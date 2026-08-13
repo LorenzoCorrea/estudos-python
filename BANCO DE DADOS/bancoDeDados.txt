@@ -1,0 +1,47 @@
+O que é um banco de dados?
+
+basicamente, tudo, uma lista de mercado é banco de dados
+uma lista
+
+
+SQL e NOSQL e suas diferenças:
+
+-SQL- NÃO é um banco de dados, é uma linguagem para banco de dados relacionais
+ - Adiciona
+ - Deleta
+ - Edita 
+Dados dentro de um banco de dados
+
+- Cada tabela possui um ID, por exemplo
+  - Nome: 
+      -1. Lorenzo
+      -2. João
+      -3. Carlos
+
+  - Produto:
+     -1. Sal
+     -2. Pimenta
+     -3. Sabão
+
+
+-NOSQL
+Já é um banco de dados não relacionais
+
+
+DBMS (Data Base Manager Sistem):
+Mysql
+oracle
+pstgreSQL
+Microsoft Acess
+MariaDB
+
+-Software que organiza, armazena, faz backups de um banco de dados
+-importa e exporta dados
+-Ajuda com linguagens de programação
+-Armazena:
+Pequenas
+Medias
+Grandes , quantidades de dados
+
+
+- Workbanch é a interface
