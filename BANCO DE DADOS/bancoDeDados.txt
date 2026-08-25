@@ -45,3 +45,8 @@ Grandes , quantidades de dados
 
 
 - Workbanch é a interface
+
+OPERADORES AND OR NOT
+AND = E 
+OR = OU
+NOT = NÃO
