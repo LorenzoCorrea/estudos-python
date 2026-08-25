@@ -1,94 +1,132 @@
-O que é um banco de dados?
+Anotações de SQL
+1. O que é um Banco de Dados?
 
-basicamente, tudo, uma lista de mercado é banco de dados
-uma lista
+De forma simples, um banco de dados é qualquer coleção organizada de informações — basicamente, uma "lista". Até uma lista de compras de mercado pode ser vista como um banco de dados: é um conjunto de dados guardados de forma estruturada para ser consultado depois.
 
+Na prática, um banco de dados profissional guarda essas informações em tabelas, e cada linha da tabela tem um identificador único, o ID.
 
-SQL e NOSQL e suas diferenças:
+Exemplo — tabela Nome:
 
--SQL- NÃO é um banco de dados, é uma linguagem para banco de dados relacionais
- - Adiciona
- - Deleta
- - Edita 
-Dados dentro de um banco de dados
+ID	Nome
+1	Lorenzo
+2	João
+3	Carlos
 
-- Cada tabela possui um ID, por exemplo
-  - Nome: 
-      -1. Lorenzo
-      -2. João
-      -3. Carlos
+Exemplo — tabela Produto:
 
-  - Produto:
-     -1. Sal
-     -2. Pimenta
-     -3. Sabão
+ID	Produto
+1	Sal
+2	Pimenta
+3	Sabão
+2. SQL x NoSQL
 
+SQL não é um banco de dados — é uma linguagem usada para trabalhar com bancos de dados relacionais (dados organizados em tabelas que se conectam entre si por IDs). Com SQL, é possível:
 
--NOSQL
-Já é um banco de dados não relacionais
+Adicionar dados
+Editar dados
+Deletar dados
 
+dentro de um banco de dados.
 
-DBMS (Data Base Manager Sistem):
-Mysql
-oracle
-pstgreSQL
-Microsoft Acess
+NoSQL, por outro lado, já é o próprio banco de dados — só que não relacional, ou seja, não organiza as informações necessariamente em tabelas com relações entre si (pode usar documentos, chave-valor, grafos, etc.).
+
+3. DBMS (Database Management System)
+
+O DBMS é o software que gerencia o banco de dados. Ele é responsável por:
+
+Organizar, armazenar e fazer backup dos dados
+Importar e exportar dados
+Se conectar/integrar com linguagens de programação
+Armazenar quantidades pequenas, médias ou grandes de dados
+
+Exemplos de DBMS:
+
+MySQL
+Oracle
+PostgreSQL
+Microsoft Access
 MariaDB
 
--Software que organiza, armazena, faz backups de um banco de dados
--importa e exporta dados
--Ajuda com linguagens de programação
--Armazena:
-Pequenas
-Medias
-Grandes , quantidades de dados
+Workbench (MySQL Workbench) é a interface gráfica usada para interagir com o DBMS (no caso, o MySQL) de forma visual, sem precisar digitar tudo em modo texto puro.
 
-
-- Workbanch é a interface
-
-
-Anotações de SQL
-Comandos básicos
-
+4. Comandos básicos
 USE — Seleciona o banco de dados
+
+Define qual banco de dados será usado nas próximas consultas.
 
 sql
 USE nome_do_banco;
-
 SELECT — Seleciona a(s) coluna(s)
+
+Define quais colunas você quer trazer no resultado.
 
 sql
 SELECT coluna1, coluna2 FROM tabela;
-
 FROM — Seleciona a tabela
+
+Define de qual tabela os dados serão buscados.
 
 sql
 SELECT * FROM tabela;
+ORDER BY — Ordena o resultado
 
-ORDER BY — Deixa o resultado em ordem (alfabética/numérica)
+Organiza o resultado em ordem alfabética ou numérica.
 
 sql
 SELECT * FROM tabela ORDER BY coluna;        -- ordem crescente (padrão)
 SELECT * FROM tabela ORDER BY coluna DESC;   -- ordem decrescente
+WHERE — Filtra linhas
 
-WHERE — Filtra linhas com base em uma condição em uma coluna
+Filtra as linhas da tabela com base em uma condição aplicada a uma coluna.
 
 sql
 SELECT * FROM tabela WHERE coluna = 'valor';
+5. Operadores lógicos: AND, OR, NOT
 
+Usados para combinar ou negar condições dentro do WHERE.
 
+AND = E → todas as condições precisam ser verdadeiras
+OR = OU → basta uma das condições ser verdadeira
+NOT = NÃO → nega/inverte a condição
+sql
+SELECT * FROM actor WHERE first_name = 'Ana' AND last_name = 'Silva';
+SELECT * FROM actor WHERE first_name = 'Ana' OR first_name = 'João';
+SELECT * FROM actor WHERE NOT first_name = 'Ana';
+6. Operador IN
 
-OPERADORES AND OR NOT
-AND = E 
-OR = OU
-NOT = NÃO
+Verifica se um valor está dentro de uma lista de valores possíveis. É como usar vários OR de uma vez, de forma mais curta.
 
+sql
+SELECT * FROM address
+WHERE district IN ('Alberta', 'Texas', 'California');
+7. Operador BETWEEN
 
+Filtra valores dentro de um intervalo (range), do início ao fim, incluindo os dois extremos.
 
-OPERADOR IN 
-WHERE district in ("Alberta", "Texas", "California");
+sql
+SELECT * FROM payment
+WHERE amount BETWEEN 1.99 AND 3.99;
+8. Operador LIKE
 
-OPERADOR Between (entre um valor e outro (range inicio & fim))
-ex: WHERE amount BETWEEN 1.99 AND 3.99
+Filtra valores de texto com base em um padrão, usando o caractere % como coringa (representa "qualquer sequência de caracteres").
 
-OPERADOR LIKE
+sql
+SELECT * FROM actor
+WHERE first_name LIKE 'A%';   -- nomes que começam com "A"
+9. Operador IS NULL
+
+Verifica se um campo está vazio/nulo (sem valor cadastrado).
+
+sql
+SELECT *
+FROM address
+WHERE address2 IS NULL;
+10. Operador LIMIT
+
+Limita a quantidade de linhas retornadas. Também é possível informar um "offset" (a partir de qual linha começar).
+
+sql
+SELECT * FROM actor
+LIMIT 5, 10;   -- pula as 5 primeiras linhas e retorna as 10 seguintes
+
+Última atualização: 25/08/2026
