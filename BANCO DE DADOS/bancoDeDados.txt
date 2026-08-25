@@ -82,3 +82,11 @@ OPERADORES AND OR NOT
 AND = E 
 OR = OU
 NOT = NÃO
+
+
+
+OPERADOR IN 
+WHERE district in ("Alberta", "Texas", "California");
+
+OPERADOR Between (entre um valor e outro (range inicio & fim))
+
