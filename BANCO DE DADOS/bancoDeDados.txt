@@ -89,4 +89,6 @@ OPERADOR IN
 WHERE district in ("Alberta", "Texas", "California");
 
 OPERADOR Between (entre um valor e outro (range inicio & fim))
+ex: WHERE amount BETWEEN 1.99 AND 3.99
 
+OPERADOR LIKE
