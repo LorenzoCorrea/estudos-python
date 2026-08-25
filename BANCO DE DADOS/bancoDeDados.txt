@@ -46,6 +46,38 @@ Grandes , quantidades de dados
 
 - Workbanch é a interface
 
+
+Anotações de SQL
+Comandos básicos
+
+USE — Seleciona o banco de dados
+
+sql
+USE nome_do_banco;
+
+SELECT — Seleciona a(s) coluna(s)
+
+sql
+SELECT coluna1, coluna2 FROM tabela;
+
+FROM — Seleciona a tabela
+
+sql
+SELECT * FROM tabela;
+
+ORDER BY — Deixa o resultado em ordem (alfabética/numérica)
+
+sql
+SELECT * FROM tabela ORDER BY coluna;        -- ordem crescente (padrão)
+SELECT * FROM tabela ORDER BY coluna DESC;   -- ordem decrescente
+
+WHERE — Filtra linhas com base em uma condição em uma coluna
+
+sql
+SELECT * FROM tabela WHERE coluna = 'valor';
+
+
+
 OPERADORES AND OR NOT
 AND = E 
 OR = OU
